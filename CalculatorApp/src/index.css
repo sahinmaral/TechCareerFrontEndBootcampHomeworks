@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .app {
+    @apply bg-slate-200;
+
+    &.dark{
+      @apply bg-slate-700;
+    }
+  }
+
+  .calculator {
+    .screen {
+      @apply w-full h-[70px] rounded-t-md cursor-default bg-slate-700 dark:bg-slate-300 text-[35px] px-2 text-white dark:text-black flex justify-end items-center;
+    }
+
+    .buttons {
+      @apply w-[70px] p-5 flex justify-center items-center border border-gray-300
+      text-2xl bg-white dark:bg-slate-600 hover:dark:bg-slate-700 dark:text-white hover:bg-slate-100 hover:cursor-pointer;
+
+      &#calculator-result {
+        @apply bg-orange-300 hover:bg-orange-400 dark:bg-orange-500 hover:dark:bg-orange-600 rounded-ee-md;
+      }
+
+      &#calculator-zero {
+        @apply rounded-bl-md;
+      }
+
+      &#calculator-add,
+      &#calculator-substract,
+      &#calculator-multiply,
+      &#calculator-divide {
+        @apply bg-gray-200 hover:bg-gray-300 dark:bg-gray-500 hover:dark:bg-gray-600;
+      }
+    }
+  }
+}
