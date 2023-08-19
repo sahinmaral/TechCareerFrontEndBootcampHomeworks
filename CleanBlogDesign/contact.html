@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Clean Blog - Start Bootstrap Theme</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="left-side">
+        <a class="brand" href="index.html">Start Bootstrap</a>
+      </div>
+      <div class="right-side">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="post.html">Sample Post</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header class="banner contact-banner">
+      <div class="content">
+        <h1 class="header">Contact Me</h1>
+        <p class="description">Have questions? I have answers.</p>
+      </div>
+    </header>
+    <main class="container">
+      <div class="col">
+        <div class="row">
+          <p class="content">
+            Want to get in touch? Fill out the form below to send me a message
+            and I will get back to you as soon as possible!
+          </p>
+          <form>
+            <div class="form-group">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Name"
+                onfocusout="checkFormElement(event)"
+              />
+              <label for="name">Name</label>
+              <p class="invalid-feedback"></p>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                onfocusout="checkFormElement(event)"
+                placeholder="Email address"
+                class="form-control"
+              />
+              <label for="email">Email address</label>
+              <p class="invalid-feedback"></p>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="phoneNumber"
+                id="phoneNumber"
+                onfocusout="checkFormElement(event)"
+                placeholder="Phone Number"
+                class="form-control"
+              />
+              <label for="phoneNumber">Phone Number</label>
+              <p class="invalid-feedback"></p>
+            </div>
+            <div class="form-group">
+              <textarea
+                style="height: 12rem"
+                name="message"
+                id="message"
+                onfocusout="checkFormElement(event)"
+                placeholder="Message"
+                class="form-control"
+              ></textarea>
+              <label for="message">Message</label>
+              <p class="invalid-feedback"></p>
+            </div>
+            <input type="submit" value="Send" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="social-media">
+        <div class="icon">
+          <a href="https://twitter.com/sahinnmaral">
+            <i class="fa-brands fa-twitter fa-xl"></i>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="https://www.linkedin.com/in/sahinmaral/">
+            <i class="fa-brands fa-linkedin fa-xl"></i>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="https://github.com/sahinmaral">
+            <i class="fa-brands fa-github fa-xl"></i>
+          </a>
+        </div>
+      </div>
+      <p class="copyright">Copyright © Your Website 2023</p>
+    </footer>
+    <script src="./script/main.js"></script>
+  </body>
+</html>

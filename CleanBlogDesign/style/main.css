@@ -1,0 +1,230 @@
+:root {
+  /* Colors */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-teal: #0085a1;
+  --color-teal-dark: #055f70;
+  --color-lightest-gray: #dddfe1;
+  --color-light-gray: #6c757d;
+  --color-light-black: #212529;
+
+  /* Fonts */
+  --font-custom: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: var(--font-custom);
+}
+
+p {
+  margin: 2rem 0;
+  line-height: 1.5em;
+}
+
+p a {
+  color: var(--color-black);
+}
+
+p a:hover {
+  color: var(--color-teal);
+}
+
+.section-heading {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.caption {
+  margin: 0.5em;
+  font-size: 0.8em;
+  display: block;
+  text-align: center;
+  color: var(--color-light-gray);
+}
+
+.navbar {
+  color: var(--color-white);
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.navbar .brand {
+  font-weight: bold;
+  font-size: 1em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar .menu {
+  text-transform: uppercase;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar .menu a {
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.navbar .menu a:hover,
+.navbar .brand:hover {
+  color: var(--color-lightest-gray);
+  cursor: pointer;
+}
+
+.banner {
+  position: relative;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  height: 532px;
+  background-position-y: -130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner .content .header {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 5em;
+  margin-bottom: 0.1em;
+}
+
+.banner .content .description {
+  color: var(--color-white);
+  font-size: 1.5em;
+  margin: 0.8em 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 5em;
+  padding-bottom: 3em;
+}
+
+.container .row {
+  width: 600px;
+}
+
+.footer {
+  border-top: 1px solid var(--color-lightest-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.footer .social-media {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 0.5em;
+}
+
+.footer .social-media i {
+  color: var(--color-white);
+}
+
+.footer .social-media .icon {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-light-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .social-media .icon:hover {
+  background-color: var(--color-teal);
+  cursor: pointer;
+}
+
+.footer .copyright {
+  font-style: italic;
+  color: var(--color-light-gray);
+  font-size: 1.2em;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+.toggle-navbar {
+  color: var(--color-light-gray);
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid hsl(208, 7%, 46%, 0.2);
+  background-color: var(--color-white);
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar-mobile {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--color-black);
+    flex-direction: column;
+    display: flex;
+    background-color: var(--color-white);
+    transition: 0.15s ease-in-out;
+  }
+
+  .navbar-mobile .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-mobile .menu {
+    color: var(--color-light-gray);
+    font-size: 0.9em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+
+  .navbar-mobile .menu-group {
+    max-height: 200px;
+    transition: max-height 0.35s ease-in;
+    overflow: hidden;
+  }
+
+  .navbar-mobile .menu-group.hidden {
+    max-height: 0;
+    transition: max-height 0.35s ease-out;
+  }
+}

@@ -1,0 +1,21 @@
+:root{
+    /* Colors */
+    --color-black : #000000;
+    --color-white:#ffffff;
+    --color-teal : #0085A1;
+    --color-teal-dark:#055f70;
+    --color-lightest-gray: #dddfe1;
+    --color-light-gray: #6c757d;
+    --color-light-black:#212529;
+
+    /* Fonts */
+}
+
+.about-banner{
+    background-image:url("../images/about-bg.jpg");
+}
+
+.container .content{
+    font-size: 1.3em;
+    margin:30px;
+}
