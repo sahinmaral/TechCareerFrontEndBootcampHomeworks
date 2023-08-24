@@ -23,7 +23,7 @@ const ThemeToggler: FC = () => {
   return (
     <div className="flex justify-end py-5">
       <button
-        className="border border-gray-200 dark:border-0 dark:bg-gray-300 hover:bg-red-300 hover:dark:bg-red-300 py-2 px-4 rounded-md"
+        className="border border-gray-200 dark:border-0 bg-gray-300 hover:bg-red-300 hover:dark:bg-red-300 py-2 px-4 rounded-md"
         onClick={() => toggleTheme()}
       >
         <FontAwesomeIcon icon={faMoon} />
