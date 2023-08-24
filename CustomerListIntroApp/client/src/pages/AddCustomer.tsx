@@ -1,18 +1,11 @@
-import { ChangeEvent, FC, useState } from "react";
+import { FC } from "react";
 import Customer from "../types/Customer";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { useToaster } from "../context/ToasterProvider";
 import { Helmet } from "react-helmet-async";
-import {
-  ErrorMessage,
-  Field,
-  Form,
-  Formik,
-  useFormik,
-  useFormikContext,
-} from "formik";
+import { Formik, useFormik } from "formik";
 import CustomerSchema from "../schema/CustomerSchema";
 import AddCustomerFormFields from "../components/AddCustomerFormFields";
 

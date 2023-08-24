@@ -2,7 +2,6 @@ import { FC, useMemo } from "react";
 import Customer from "../types/Customer";
 import OrderType from "../enums/OrderTypeEnum";
 import CustomerOrderSection from "./CustomerOrderSection";
-import { Link } from "react-router-dom";
 
 type CustomerTableProps = {
   customers: Customer[];
