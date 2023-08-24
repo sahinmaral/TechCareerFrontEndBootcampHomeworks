@@ -1,1 +1,9 @@
 @tailwind utilities;
+
+.text-fill-color {
+  -webkit-text-fill-color: var(--text-fill-color);
+}
+
+.dark .text-fill-color {
+  --text-fill-color: white;
+}

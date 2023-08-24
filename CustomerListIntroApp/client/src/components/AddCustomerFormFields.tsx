@@ -21,7 +21,7 @@ const AddCustomerForminputs: FC = () => {
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.companyName}
-          className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+          className={`autofill:shadow-input dark:autofill:shadow-input-dark block py-2.5 px-0 w-full text-sm dark:text-white text-gray-900 bg-transparent border-0 border-b-2 ${
             touched.companyName && errors.companyName
               ? "border-red-500"
               : "border-gray-300"
@@ -34,7 +34,7 @@ const AddCustomerForminputs: FC = () => {
             touched.companyName && errors.companyName
               ? "text-red-500"
               : "text-gray-500 dark:text-gray-200"
-          } duration-300 -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+          } duration-300 -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
         >
           Şirket Adi
         </label>
@@ -52,7 +52,7 @@ const AddCustomerForminputs: FC = () => {
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.contactName}
-          className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+          className={`autofill:shadow-input dark:autofill:shadow-input-dark block py-2.5 px-0 w-full text-sm dark:text-white text-gray-900 bg-transparent border-0 border-b-2 ${
             touched.contactName && errors.contactName
               ? "border-red-500"
               : "border-gray-300"
@@ -65,7 +65,7 @@ const AddCustomerForminputs: FC = () => {
             touched.contactName && errors.contactName
               ? "text-red-500"
               : "text-gray-500 dark:text-gray-200"
-          } duration-300 -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+          } duration-300 -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
         >
           İletişim adı
         </label>
@@ -84,7 +84,7 @@ const AddCustomerForminputs: FC = () => {
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.contactTitle}
-          className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+          className={`autofill:shadow-input dark:autofill:shadow-input-dark block py-2.5 px-0 w-full text-sm dark:text-white text-gray-900 bg-transparent border-0 border-b-2 ${
             touched.contactTitle && errors.contactTitle
               ? "border-red-500"
               : "border-gray-300"
@@ -97,7 +97,7 @@ const AddCustomerForminputs: FC = () => {
             touched.contactTitle && errors.contactTitle
               ? "text-red-500"
               : "text-gray-500 dark:text-gray-200"
-          } duration-300 -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+          } duration-300 -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
         >
           İletişim başlığı
         </label>
@@ -119,7 +119,7 @@ const AddCustomerForminputs: FC = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.address.street}
-            className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+            className={`autofill:shadow-input dark:autofill:shadow-input-dark block py-2.5 px-0 w-full text-sm dark:text-white text-gray-900 bg-transparent border-0 border-b-2 ${
               touched.address?.street && errors.address?.street
                 ? "border-red-500"
                 : "border-gray-300"
@@ -132,7 +132,7 @@ const AddCustomerForminputs: FC = () => {
               touched.address?.street && errors.address?.street
                 ? "text-red-500"
                 : "text-gray-500 dark:text-gray-200"
-            } duration-300 -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+            } duration-300 -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
           >
             Sokak
           </label>
@@ -150,7 +150,7 @@ const AddCustomerForminputs: FC = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.address.city}
-            className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+            className={`autofill:shadow-input dark:autofill:shadow-input-dark block py-2.5 px-0 w-full text-sm dark:text-white text-gray-900 bg-transparent border-0 border-b-2 ${
               touched.address?.city && errors.address?.city
                 ? "border-red-500"
                 : "border-gray-300"
@@ -163,7 +163,7 @@ const AddCustomerForminputs: FC = () => {
               touched.address?.city && errors.address?.city
                 ? "text-red-500"
                 : "text-gray-500 dark:text-gray-200"
-            } duration-300 -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+            } duration-300 -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
           >
             Şehir
           </label>
@@ -183,7 +183,7 @@ const AddCustomerForminputs: FC = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.address.postalCode}
-            className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+            className={`autofill:shadow-input dark:autofill:shadow-input-dark block py-2.5 px-0 w-full text-sm dark:text-white text-gray-900 bg-transparent border-0 border-b-2 ${
               touched.address?.postalCode && errors.address?.postalCode
                 ? "border-red-500"
                 : "border-gray-300"
@@ -196,7 +196,7 @@ const AddCustomerForminputs: FC = () => {
               touched.address?.postalCode && errors.address?.postalCode
                 ? "text-red-500"
                 : "text-gray-500 dark:text-gray-200"
-            } duration-300 -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+            } duration-300 -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
           >
             Posta Kodu
           </label>
@@ -214,7 +214,7 @@ const AddCustomerForminputs: FC = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.address.country}
-            className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+            className={`autofill:shadow-input dark:autofill:shadow-input-dark block py-2.5 px-0 w-full text-sm dark:text-white text-gray-900 bg-transparent border-0 border-b-2 ${
               touched.address?.country && errors.address?.country
                 ? "border-red-500"
                 : "border-gray-300"
@@ -227,7 +227,7 @@ const AddCustomerForminputs: FC = () => {
               touched.address?.country && errors.address?.country
                 ? "text-red-500"
                 : "text-gray-500 dark:text-gray-200"
-            } duration-300 -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+            } duration-300 -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
           >
             Ülke
           </label>
@@ -247,7 +247,7 @@ const AddCustomerForminputs: FC = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.address.phone}
-            className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 ${
+            className={`autofill:shadow-input dark:autofill:shadow-input-dark block py-2.5 px-0 w-full text-sm dark:text-white text-gray-900 bg-transparent border-0 border-b-2 ${
               touched.address?.phone && errors.address?.phone
                 ? "border-red-500"
                 : "border-gray-300"
@@ -260,7 +260,7 @@ const AddCustomerForminputs: FC = () => {
               touched.address?.phone && errors.address?.phone
                 ? "text-red-500"
                 : "text-gray-500 dark:text-gray-200"
-            } duration-300 -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
+            } duration-300 -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6`}
           >
             Telefon Numarası (1234567890)
           </label>

@@ -6,7 +6,12 @@ export default {
   ],
   darkMode : "class",
   theme: {
-    extend: {},
+    extend: {
+      boxShadow : {
+        "input" : "inset 0 0 0 220px white !important",
+        "input-dark" : "inset 0 0 0 220px #6b7280 !important"
+      }
+    },
   },
   plugins: [],
 }

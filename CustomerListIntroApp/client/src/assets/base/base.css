@@ -1,5 +1,8 @@
 @tailwind base;
 
-body{
-    @apply dark:bg-gray-500 transition-colors duration-300;
+
+
+
+body {
+  @apply dark:bg-gray-500 transition-colors duration-300;
 }
