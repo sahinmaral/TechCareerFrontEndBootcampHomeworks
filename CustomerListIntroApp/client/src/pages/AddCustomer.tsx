@@ -54,7 +54,7 @@ const AddCustomer: FC<AddCustomerProps> = ({ customers, setCustomers }) => {
     setCustomers([...customers, newCustomer]);
 
     axios
-      .post("http://localhost:3000/customers", newCustomer)
+      .post("https://customerlistroapp-jsonserver.onrender.com/customers", newCustomer)
       .then(() => {
         setInfoWithMessage("Müşteri başarıyla kaydedildi");
         navigate("/");

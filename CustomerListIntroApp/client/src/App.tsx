@@ -28,7 +28,7 @@ const App: FC = () => {
 
   useEffect(() => {
     axios
-      .get<Customer[]>("https://customerlistroapp-jsonserver.onrender.com/")
+      .get<Customer[]>("https://customerlistroapp-jsonserver.onrender.com/customers")
       .then((response) => {
         setCustomers(response.data);
       })
