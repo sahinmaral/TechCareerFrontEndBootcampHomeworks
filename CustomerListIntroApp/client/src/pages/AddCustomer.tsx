@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, FormEvent, useContext, useState } from "react";
+import { ChangeEvent, FC, FormEvent,  useState } from "react";
 import Customer from "../types/Customer";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
@@ -14,16 +14,16 @@ type AddCustomerProps = {
 const AddCustomer: FC<AddCustomerProps> = ({ customers, setCustomers }) => {
   const initialData = {
     id: uuidv4(),
-    companyName: `tes${uuidv4()}`,
-    contactName: "tes",
-    contactTitle: "tes",
+    companyName: "",
+    contactName: "",
+    contactTitle: "",
     address: {
-      street: "tes",
-      country: "tes",
-      city: "tes",
-      region: "tes",
-      postalCode: "tes",
-      phone: "0921-12 34 65",
+      street: "",
+      country: "",
+      city: "",
+      region: "",
+      postalCode: "",
+      phone: "",
     },
   };
 

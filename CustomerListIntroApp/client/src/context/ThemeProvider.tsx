@@ -1,4 +1,4 @@
-import { FC, ReactNode, createContext, useState } from "react";
+import { FC, ReactNode, useState } from "react";
 import { ThemeContext } from "./ThemeContext";
 
 type ThemeProviderProps = {
