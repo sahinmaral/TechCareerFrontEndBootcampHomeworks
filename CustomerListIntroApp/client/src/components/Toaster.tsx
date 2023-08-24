@@ -16,39 +16,71 @@ type ToasterProps = {
   context: ToasterContext;
 };
 
+type ToasterComponentsClassStates = {
+  iconBackground: string;
+  progressBar: string;
+  icon: string;
+};
+
+
 const Toaster: FC<ToasterProps> = ({ context }) => {
-  const [maxDuration,setMaxDuration] = useState<number>(context.initialDuration);
+  const [maxDuration, setMaxDuration] = useState<number>(
+    context.initialDuration
+  );
   const [progress, setProgress] = useState<number>(context.initialDuration);
 
-  const [color, setColor] = useState<string>("transparent");
   const [icon, setIcon] = useState<IconDefinition>(faCircleInfo);
 
-  const {clearToastr} = useToaster()
+  const initialData = {
+    iconBackground:
+      "inline-flex items-center justify-center flex-shrink-0 w-8 h-8 bg-transparent-100 rounded-lg dark:bg-transparent-800",
+    icon: "text-transparent-500 dark:text-transparent-200",
+    progressBar:
+      "bg-transparent-600 h-1 opacity-30 transition-all duration-500",
+  };
+
+  const [toasterComponentsClassStates, setToasterComponentsClassStates] =
+    useState<ToasterComponentsClassStates>(initialData);
+
+  const { clearToastr } = useToaster();
 
   const progressBarWidth = useMemo(() => {
     return (progress / maxDuration) * 100;
   }, [progress]);
 
+  const setColorOfEveryToasterComponents = (color: string) => {
+    const updatedStates: ToasterComponentsClassStates = {
+      iconBackground: initialData.iconBackground.replaceAll(
+        "transparent",
+        color
+      ),
+      icon: initialData.icon.replace("transparent", color),
+      progressBar: initialData.progressBar.replaceAll("transparent", color),
+    };
+
+    setToasterComponentsClassStates(updatedStates);
+  };
+
   const renderByToasterType = () => {
     switch (context.toastType) {
       case ToasterType.SUCCESS:
-        setColor("green");
+        setColorOfEveryToasterComponents("green");
         setIcon(faCircleCheck);
         break;
       case ToasterType.DANGER:
-        setColor("red");
+        setColorOfEveryToasterComponents("red");
         setIcon(faCircleXmark);
         break;
       case ToasterType.WARNING:
-        setColor("yellow");
+        setColorOfEveryToasterComponents("yellow");
         setIcon(faCircleExclamation);
         break;
       case ToasterType.INFO:
-        setColor("blue");
+        setColorOfEveryToasterComponents("blue");
         setIcon(faCircleInfo);
         break;
       default:
-        setColor("transparent");
+        setColorOfEveryToasterComponents("transparent");
         setIcon(faCircleInfo);
         break;
     }
@@ -63,11 +95,10 @@ const Toaster: FC<ToasterProps> = ({ context }) => {
       return () => {
         clearInterval(timerId);
       };
-    }else{
-      clearToastr()
+    } else {
+      clearToastr();
     }
   }, [progress]);
-
 
   useEffect(() => {
     renderByToasterType();
@@ -83,12 +114,10 @@ const Toaster: FC<ToasterProps> = ({ context }) => {
         } bottom-7 right-7 w-full max-w-xs pt-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800`}
       >
         <div className="flex items-center pb-4 px-4">
-          <div
-            className={`inline-flex items-center justify-center flex-shrink-0 w-8 h-8 bg-${color}-100 rounded-lg dark:bg-${color}-800`}
-          >
+          <div className={toasterComponentsClassStates.iconBackground}>
             <FontAwesomeIcon
               icon={icon}
-              className={`text-${color}-500 dark:text-${color}-200`}
+              className={toasterComponentsClassStates.icon}
             />
           </div>
           <div className="ml-3 text-sm font-normal">{context.message}</div>
@@ -102,7 +131,7 @@ const Toaster: FC<ToasterProps> = ({ context }) => {
         </div>
         <div className={`w-full bg-gray-200 h-1 dark:bg-gray-700`}>
           <div
-            className={`bg-${color}-300 h-1 opacity-30 transition-all duration-500`}
+            className={toasterComponentsClassStates.progressBar}
             style={{ width: `${progressBarWidth}%` }}
           ></div>
         </div>

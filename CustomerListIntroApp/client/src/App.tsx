@@ -28,7 +28,7 @@ const App: FC = () => {
 
   useEffect(() => {
     axios
-      .get<Customer[]>("https://customerlistroapp-jsonserver.onrender.com/customers")
+      .get<Customer[]>(`${import.meta.env.VITE_MOCKUP_API_URL}/customers`)
       .then((response) => {
         setCustomers(response.data);
       })

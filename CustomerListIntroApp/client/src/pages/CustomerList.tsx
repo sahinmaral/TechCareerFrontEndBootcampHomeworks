@@ -23,6 +23,7 @@ const CustomerList: FC<CustomerListPageProps> = ({
   filter,
   setFilter,
 }) => {
+
   return (
     <Fragment>
       <Helmet>

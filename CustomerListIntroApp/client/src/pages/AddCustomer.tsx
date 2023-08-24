@@ -36,10 +36,7 @@ const AddCustomer: FC<AddCustomerProps> = ({ customers, setCustomers }) => {
 
   const onSubmit = (values: Customer) => {
     axios
-      .post(
-        "https://customerlistroapp-jsonserver.onrender.com/customers",
-        values
-      )
+      .post(`${import.meta.env.VITE_MOCKUP_API_URL}/customers`, values)
       .then(() => {
         setCustomers([...customers, values]);
         setInfoWithMessage("Müşteri başarıyla kaydedildi");
